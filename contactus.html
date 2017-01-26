@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<!-- Contact Us Page
+
+Team Member Names: Tatianna Landry
+                   Kaiden McFayden-Faint
+                   Jarret Wright
+                   Ka Chun Leung (Sunny)
+
+File: contactus.html
+
+Date: December 4th 2015 -->
+
+<html>
+  <head>
+  <script>
+	function checkForm(){
+		var values= /^[0-9][0-9-]/;
+		if(document.contact.phone.value.match(values)) {
+			return true;
+		}
+		alert("Please only use numbers in your phone number");
+		return false;
+	}
+</script>
+    <title> Sandy Point Campground </title>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Sandy Point Campground" />
+    <meta name="description" content="A site for sharing information of the campground and the specifications." />
+    <meta name="keywords" content="Camping, British Columbia, Shuswap, Beach, Outdoors" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/tabIcon.gif" type="image/x-icon" />
+  </head>
+
+<body>
+    <section id="header">
+        <header>
+            <nav>
+                <a href="../index.html"> <img class="logo" src="images/Sandy-Point-Campground-Logo.gif" alt="logo" /> </a>
+                <ul id="nav">
+                    <li> <a class="menu" href="../index.html">HOME </a></li>
+                    <li> <a class="menu" href="aboutus.html">ABOUT US </a> </li>
+                    <li> <a class="menu" href="rates.html">RATES </a> </li>
+                    <li> <a class="menu" href="rules.html">RULES </a> </li>
+                    <li> <a class="menu" href="contactus.html">CONTACT US</a></li>
+                    <li> <a class="menu" href="gallery.html">GALLERY</a></li>
+                    <li> <a class="menu" href="crossReferencePage.html">REFERENCE</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <section id="pagecontent">
+        <h1>Contact Us</h1>
+	<div id="form">
+        <form onsubmit="return checkForm()" name="contact">
+            Your Name<br>
+            <input type="text" name="name" size="22" required><br>
+            Your Email<br>
+            <input type="email" name="email" size="22" required><br>
+            Your Phone Number<br>
+            <input type="text" name="phone" size="22" required><br>
+            Message<br>
+            <textarea name="message" rows="4" cols="80" required></textarea><br>
+            <input type="checkbox" name="visitor" value="visited">I have recently
+            stayed at Sandy Point Campground<br>
+            <input class="submit" type="submit" value="Send">
+            <input class="reset " type="reset" value="Clear"><br>
+        </form>
+	</div>
+        <p>
+            PHONE: +1 250-832-3793 <br /> ANKUR, CJ, SHERRY ( GATE OFFICE ) <br />
+            AL & DORIS ONO ( OWNERS )
+        </p>
+
+        <h1> Location </h1>
+        <p> 2100 Sandy Point Rd Salmon Arm <br /> 7KMS WEST OF SALMON ARM ON TRANS CANADA HIGHWAY 1 </p>
+
+    </section>
+
+    <footer id="footer">
+        <div class="footerInfo">
+            <img class="footerIcon" src="./images/phone.png" alt="Phone Icon" />
+            <h3> Phone </h3>
+                250-832-3793 <br />
+        </div>
+        <div class="footerInfo">
+            <img class="footerIcon" src="./images/address.png" alt="Address Icon" />
+            <h3> Address </h3>
+            <address id="address">
+                Sandy Point <br />
+                2100 Sandy Point Rd. <br />
+                Salmon Arm, BC V1E2Z8 <br />
+            </address>
+        </div>
+        <div class="footerInfo">
+            <a href="http://www.facebook.com/pages/Sandy-Point-Beach-Campground/137474779597808" target="blank">
+            <img class="footerIcon" src="./images/facebook.png" alt="Facebook Icon" />
+        </a>
+        <h3> Like us on Facebook! </h3>
+        <p> &copy; 2015 All Rights Reserved.<br /> Sandy Point Campground <br/> Last Modified: 3/12/2015  </p>
+        </div>
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+
+<!-- Gallery Page
+
+Team Member Names: Tatianna Landry
+Kaiden McFayden-Faint
+Jarret Wright
+Ka Chun Leung (Sunny)
+
+File: gallery.html
+
+Date: December 4th 2015 -->
+
+<html>
+  <head>
+  <title> Sandy Point Campground </title>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Sandy Point Campground" />
+    <meta name="description" content="A site for sharing information of the campground and the specifications." />
+    <meta name="keywords" content="Camping, British Columbia, Shuswap, Beach, Outdoors" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/tabIcon.gif" type="image/x-icon" />
+    <script type="text/javascript" src="./slider_main/jssor.js"></script>
+    <script type="text/javascript" src="./slider_main/jssor.slider.js"></script>
+    <script type="text/javascript" src="./slider_main/slider.js"></script>
+  </head>
+  <body>
+    <section id="header" style="z-index:+1;">
+      <header>
+        <nav>
+          <a href="../index.html"> <img class="logo" src="images/Sandy-Point-Campground-Logo.gif" alt="logo" /> </a>
+          <ul id="nav">
+          <li> <a class="menu" href="../index.html">HOME </a></li>
+          <li> <a class="menu" href="aboutus.html">ABOUT US </a> </li>
+          <li> <a class="menu" href="rates.html">RATES </a> </li>
+          <li> <a class="menu" href="rules.html">RULES </a> </li>
+          <li> <a class="menu" href="contactus.html">CONTACT US</a></li>
+          <li> <a class="menu" href="gallery.html">GALLERY</a></li>
+          <li> <a class="menu" href="crossReferencePage.html">REFERENCE</a></li>
+          </ul>
+        </nav>
+      </header>
+    </section>
+    <section id="pagecontent">
+    <section>
+      <h1> Gallery </h1>
+      <!-- Jssor Slider Begin -->
+      <!-- You can move inline styles to css file or css block. -->
+      <div id="sliderb_container" style="position: relative; width: 900px; height:
+         350px; overflow: hidden; margin:auto;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+          <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute;
+            display: block; background-color: #000; top: 0px; left: 0px;width: 100%;
+            height:100%;">
+          </div>
+          <div style="position: absolute; display: block; background: url(../img/loading.gif)
+            no-repeat center center; top: 0px; left: 0px;width: 100%;height:100%;">
+          </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px;
+          top: 0px; width: 900px; height: 350px; overflow: hidden;">
+          <div>
+          <img u=image src="./images/slider_01.jpg" />
+          <div u="thumb">Salmon Arm at Night</div>
+        </div>
+        <div>
+          <img u=image src="./images/slider_02.jpg" />
+          <div u="thumb">A View of the Beach</div>
+        </div>
+        <div>
+          <img u=image src="./images/slider_03.jpg" />
+          <div u="thumb">30 Watt Hookup</div>
+        </div>
+        <div>
+          <img u=image src="./images/slider_04.jpg" />
+          <div u="thumb">Scenic Sites</div>
+        </div>
+        <div>
+          <img u=image src="./images/slider_05.jpg" />
+          <div u="thumb">Breathtaking Morning View</div>
+        </div>
+        <div>
+          <img u=image src="./images/slider_06.jpg" />
+          <div u="thumb"> View of the campground </div>
+        </div>
+        <div>
+          <img u=image src="./images/slider_07.gif" />
+          <div u="thumb"> View from the point </div>
+        </div>
+      </div>
+
+      <!-- ThumbnailNavigator Skin Begin -->
+      <div u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom:
+        0px; left: 0px; height:45px; width:900px;">
+        <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block;
+          background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
+        </div>
+
+        <!-- Thumbnail Item Skin Begin -->
+        <div u="slides">
+          <div u="prototype" style="position: absolute; width: 900px; height: 45px; top: 0; left: 0;">
+            <div u="thumbnailtemplate" style="position: absolute; width: 100%;
+              height: 100%; top: 0; left: 0; font-family: verdana; font-weight: normal;
+              color:#fff; line-height: 45px; font-size:20px; padding-left:10px;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- ThumbnailNavigator Skin End -->
+        <!-- Bullet Navigator Skin Begin -->
+        <!-- jssor slider bullet navigator skin 01 -->
+        <style>
+          .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+            filter: alpha(opacity=70);
+            opacity: .7;
+            overflow: hidden;
+            cursor: pointer;
+            border: #000 1px solid;
+          }
+
+          .jssorb01 div {
+            background-color: gray;
+          }
+
+          .jssorb01 div:hover, .jssorb01 .av:hover {
+            background-color: #d3d3d3;
+          }
+
+          .jssorb01 .av {
+            background-color: #fff;
+          }
+
+          .jssorb01 .dn, .jssorb01 .dn:hover {
+            background-color: #555555;
+          }
+        </style>
+
+        <!-- bullet navigator container -->
+        <div u="navigator" class="jssorb01" style="position: absolute; bottom: 16px; right: 10px;">
+          <!-- bullet navigator item prototype -->
+          <div u="prototype" style="POSITION: absolute; WIDTH: 12px; HEIGHT: 12px;"></div>
+          </div>
+          <!-- Bullet Navigator Skin End -->
+          <!-- Arrow Navigator Skin Begin -->
+          <style>
+            .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn {
+              position: absolute;
+              cursor: pointer;
+              display: block;
+              background: url(./slider_main/a17.png) no-repeat;
+              overflow: hidden;
+            }
+
+            .jssora05l {
+              background-position: -10px -40px;
+            }
+
+            .jssora05r {
+              background-position: -70px -40px;
+            }
+
+            .jssora05l:hover {
+              background-position: -130px -40px;
+            }
+
+            .jssora05r:hover {
+              background-position: -190px -40px;
+            }
+
+            .jssora05ldn {
+              background-position: -250px -40px;
+            }
+
+            .jssora05rdn {
+              background-position: -310px -40px;
+            }
+          </style>
+          <!-- Arrow Left -->
+          <span u="arrowleft" class="jssora05l" style="width: 40px; height: 40px; top: 123px; left: 8px;">
+          </span>
+
+          <!-- Arrow Right -->
+          <span u="arrowright" class="jssora05r" style="width: 40px; height: 40px; top: 123px; right: 8px">
+          </span>
+
+          <!-- Arrow Navigator Skin End -->
+          <a style="display: none" href="http://www.jssor.com">bootstrap slider</a>
+
+          <!-- Trigger -->
+          <script>
+            jssor_sliderb_starter('sliderb_container');
+          </script>
+        </div>
+        <!-- Jssor Slider End -->
+      </section>
+      <section class= "underslide">
+        <img src="./images/axelog.jpeg" alt="Firewood"/>
+        <img src="./images/fishing.jpeg" alt="Fishing"/>
+      </section>
+    </section>
+
+    <footer id="footer">
+      <div class="footerInfo">
+        <img class="footerIcon" src="./images/phone.png" alt="Phone Icon" />
+        <h3> Phone </h3>
+        250-832-3793 <br />
+      </div>
+      <div class="footerInfo">
+        <img class="footerIcon" src="./images/address.png" alt="Address Icon" />
+        <h3> Address </h3>
+        <address id="address">
+          Sandy Point <br />
+          2100 Sandy Point Rd. <br />
+          Salmon Arm, BC V1E2Z8 <br />
+        </address>
+      </div>
+      <div class="footerInfo">
+        <a href="http://www.facebook.com/pages/Sandy-Point-Beach-Campground/137474779597808" target="blank">
+        <img class="footerIcon" src="./images/facebook.png" alt="Facebook Icon" />
+        </a>
+        <h3> Like us on Facebook! </h3>
+        <p> &copy; 2015 All Rights Reserved.<br /> Sandy Point Campground <br/> Last Modified: 3/12/2015  </p>
+      </div>
+    </footer>
+  </body>
+</html>
