@@ -1,0 +1,458 @@
+﻿<!DOCTYPE html>
+
+<!-- Home Page
+
+Team Member Names: Tatianna Landry
+                   Kaiden McFayden-Faint
+                   Jarret Wright
+                   Ka Chun Leung (Sunny)
+
+File: index.html
+
+Date: December 4th 2015 -->
+
+<html>
+  <head>
+    <title> Sandy Point Campground </title>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Sandy Point Campground" />
+    <meta name="description" content="A site for sharing information of the
+    campground and the specifications." />
+    <meta name="keywords" content="Camping, British Columbia, Shuswap, Beach, Outdoors" />
+    <link rel="shortcut icon" href="./webproject/images/tabIcon.gif" type="image/x-icon" />
+   	<script>
+	var navHeight;
+	var amPm;
+		function navHeightInit() {
+			navHeight = document.getElementById("header").clientHeight;
+		}
+
+		function startTime() {
+			var today = new Date();
+			var dateStore = [3];
+			dateStore[0] = today.getHours();
+			dateStore[1] = today.getMinutes();
+			dateStore[2] = today.getSeconds();
+			h = checkHours(dateStore[0]);
+			m = checkTime(dateStore[1]);
+			s = checkTime(dateStore[2]);
+			document.getElementById('time').innerHTML =
+			h + ":" + m + ":" + s + " " + amPm + "<br />" + today.toDateString();
+			var t = setTimeout(startTime, 500);
+		}
+
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};
+			return i;
+		}
+		function checkHours(i){
+			if(!(i > 12)){
+				amPm = "AM";
+				return i;
+			}else
+			amPm = "PM";
+			return i - 12;
+		}
+			function hideNav() {
+			if(window.pageYOffset > document.body.clientHeight - document.getElementById("footer").clientHeight
+			+ - document.getElementById("icon").clientHeight - document.getElementById("content").clientHeight - navHeight) {
+				document.getElementById("attid").style.display = "none";
+			}
+			else{
+				document.getElementById("attid").style.display = "block";
+			}
+			var t = setTimeout(hideNav, 100);
+		}
+
+    </script>
+    <style>
+      /* Home Page CSS
+
+      Team Member Names: Tatianna Landry
+                         Kaiden McFayden-Faint
+                         Jarret Wright
+                         Ka Chun Leung (Sunny)
+
+      Date: December 4th 2015 */
+
+      @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+
+      /* Body Section */
+        #time {
+          color:white;
+          padding-left:6%;
+          padding-top:16%;
+        }
+
+        body{
+          background-image:url(./webproject/images/peacefulgetaway2.png);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-position: right top;
+          background-attachment:fixed;
+          display:block;
+          font-family: 'Oswald', light;
+          font-weight: 400;
+          float: left;
+          letter-spacing: 0.5px;
+          margin: 0%;
+          width: 100%;
+        }
+
+        /* Top Menu Styles */
+          #header {
+            background-attachment:scroll;
+            background-color: rgba(255,255,255,0.70);
+            position: fixed;
+            width: 100%;
+          }
+
+          #nav li{
+            display: inline-block;
+            float:left;
+            font-family: 'Oswald', normal;
+            padding: 3%;
+            white-space:nowrap;
+          }
+
+          header + ul {
+            list-style:none;
+            margin: 0%;
+            padding: 0%;
+          }
+
+          img.logo {
+          	float: left;
+            padding-left: 3%;
+            padding-top: 1.8%;
+            width: 13%;
+          }
+
+          .menu {
+            color: rgb(33, 127, 79);
+            text-decoration: none;
+          }
+
+          .menu:active {
+            color: rgb(102, 102, 51);
+          }
+
+          .menu:hover {
+            background-color: rgba(255,255,255,0.90);
+          }
+
+          .menu:visited {
+            color: rgb(0, 0, 0);
+          }
+        /* End Of Top Menu Styles */
+
+        /* Icon Section */
+          #icon {
+            background-attachment:scroll;
+            background-color: white;
+            height: 900px;
+            margin-top: 50%;
+            padding-top: 6%;
+            width: 100%;
+          }
+
+          #icon h1{
+            text-align: center;
+            font-size: xx-large;
+            font-weight: 400;
+          }
+
+          #icon a {
+            text-decoration: none;
+            color:black;
+          }
+
+          #icon a:hover {
+            text-decoration: none;
+            color: #206E48;
+          }
+
+          #icon img:hover{
+            -ms-transform: rotate(15deg);
+            -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+          }
+
+          .iconcontainer {
+            float: left;
+            margin: 0%;
+            padding-bottom: 70px;
+            padding-left:30px;
+            padding-right: 30px;
+            width: 20%;
+          }
+
+          .iconcontainertwo {
+            clear: left;
+            float: left;
+            margin: 0%;
+            padding-bottom: 70px;
+            padding-left:30px;
+            padding-right: 30px;
+            width: 20%;
+          }
+
+          img.navPhoto {
+            height: 60%;
+            margin-left: 20%;
+            width: 60%;
+          }
+        /* End of Icon Section */
+
+        /* Content Section */
+          #content {
+            background-color: #114229;
+            background-attachment:scroll;
+            color: white;
+            height: 650px;
+            padding-bottom: 6%;
+            padding-left: 15%;
+            padding-top: 6%;
+          }
+
+          #leftindent, #leftindent2 {
+            margin-left: 15%;
+          }
+
+          #list {
+            font-size: 27px;
+            letter-spacing: 2px;
+            text-shadow: black 2px 2px 1px;
+          }
+
+          .bodyText {
+            float: left;
+          }
+
+          .bodyText li {
+            font-family: 'Oswald', light;
+            font-weight: 300;
+          }
+
+          .sidePhoto {
+            float: left;
+            padding-right: 15%;
+            width: 35%;
+          }
+
+          .toTop{
+            margin: 0%;
+            padding-right: 3%;
+            width: 7%;
+          }
+
+          blockquote:first-child:first-letter {
+            float:left;
+            font-size:80px;
+            line-height:80px;
+            padding-right:7px;
+          }
+
+          body > blockquote {
+            margin: 0%;
+            font-size: 14pt;
+            text-shadow: black 2px 2px 1px;
+          }
+
+          hr {
+            margin: 0%;
+            width: 75%;
+          }
+
+          p {
+            font-weight: 300;
+            margin: 0;
+          }
+
+          p ~ h1{
+            font-family: 'Oswald', normal;
+            font-weight: 400;
+          }
+        /* End of Content Section */
+      /* End of Body Section */
+
+      /* Footer Section */
+        .footerIcon {
+          width: 40%;
+        }
+
+        .footerInfo {
+          float: left;
+          padding-right: 5%;
+          text-align: center;
+          width: 23%;
+        }
+
+		#footer img:hover{
+			-ms-transform: rotate(15deg);
+			-webkit-transform: rotate(15deg);
+			transform: rotate(15deg);
+		}
+
+        footer {
+          background-color: white;
+          height: 260px;
+          padding-bottom: 6%;
+          padding-left: 15%;
+          padding-top: 6%;
+        }
+
+        footer h3{
+          text-shadow:1px 1px rgba(0,0,0,0.5);
+        }
+
+          @media only screen and (max-width: 360px){
+            .iconcontainer {
+              width: 100%;
+            }
+
+            .iconcontainertwo {
+              width: 100%;
+            }
+          }
+      /* End of Footer Section */
+    </style>
+
+  </head>
+
+  <body onload="hideNav(); startTime(); navHeightInit()">
+    <section id="header">
+      <header>
+	<div id="attid">
+        <a href="../index.html"> <img class="logo"
+          src="./webproject/images/Sandy-Point-Campground-Logo.gif" alt="logo" /> </a>
+        <ul id="nav">
+          <li> <a class="menu" href="index.html">HOME </a></li>
+          <li> <a class="menu" href="./webproject/aboutus.html">ABOUT US </a> </li>
+          <li> <a class="menu" href="./webproject/rates.html">RATES </a> </li>
+          <li> <a class="menu" href="./webproject/rules.html">RULES </a> </li>
+          <li> <a class="menu" href="./webproject/contactus.html">CONTACT US</a></li>
+          <li> <a class="menu" href="./webproject/gallery.html">GALLERY</a></li>
+          <li> <a class="menu" href="./webproject/crossReferencePage.html">REFERENCE</a></li>
+        </ul>
+	</div>
+      </header>
+    </section>
+    <section id="time">
+    </section>
+
+    <section id="icon">
+
+      <section class="iconcontainer" id="leftindent">
+        <a href="./webproject/aboutus.html" target="blank"><img class="navPhoto" src="./webproject/images/aboutus.gif"
+        alt="About Us"/> </a>
+        <h1><a href="./webproject/aboutus.html" target="blank"> About us </a></h1>
+        <p> A family run campground ensuring the best visitor experience for all the campers.
+        You can view the beautiful town of Salmon Arm from the sandy point end.</p>
+      </section>
+
+      <section class="iconcontainer">
+        <a href="./webproject/rates.html" target="blank"> <img class="navPhoto" src="./webproject/images/rates.gif"
+        alt="Rates"/> </a>
+        <h1><a href="./webproject/rates.html" target="blank"> Rates </a> </h1>
+        <p> Our rates for our campground covers various hookups, amendities,
+          as well as our refund and cancellation policy. </p>
+      </section>
+
+      <section class="iconcontainer">
+        <a href="./webproject/rules.html" target="blank"> <img class="navPhoto" src="./webproject/images/rules.gif"
+        alt="Rules"/> </a>
+        <h1> <a href="./webproject/rules.html" target="blank">Rules </a></h1>
+        <p> This page provides the rules that must be followed when using our
+           camground, including checkout and re-registration times. </p>
+      </section>
+
+      <section class="iconcontainertwo" id="leftindent2">
+        <a href="./webproject/contactus.html" target="blank"> <img class="navPhoto" src="./webproject/images/contactus.gif"
+        alt="Contact"/> </a>
+        <h1> <a href="./webproject/contactus.html" target="blank"> Contact Us</a> </h1>
+        <p> This page contains all the information you will need to contact
+           us with and questions or concerns about our camground. </p>
+      </section>
+
+      <section class="iconcontainer">
+        <a href="./webproject/gallery.html" target="blank"> <img class="navPhoto" src="./webproject/images/gallery.gif"
+        alt="Gallery"/> </a>
+        <h1><a href="./webproject/gallery.html" target="blank">  Gallery</a> </h1>
+        <p> This page contains pictures of the campground that we have taken
+          to give you a preview of what we have to offer. </p>
+      </section>
+
+      <section class="iconcontainer">
+        <a href="./webproject/crossReferencePage.html" target="blank"> <img class="navPhoto" src="./webproject/images/map.gif"
+        alt="Reference"/> </a>
+        <h1> <a href="./webproject/crossReferencePage.html" target="blank">Reference</a> </h1>
+        <p> This page provides reference for marking purposes and to access the
+        links that reference the website. </p>
+      </section>
+    </section>
+
+    <section id="content">
+
+      <img class="sidePhoto" src="./webproject/images/landscape-3.jpg" alt="BEACH"/>
+
+      <section class="bodyText">
+        <blockquote id="quote">"A family friendly camp experience <br />
+          On the beautiful Shuswap Lake near <br /> Salmon Arm, British Columbia"
+          <br/> &mdash; Doris Ono
+       </blockquote>
+
+
+        <!-- Header group not needed, as only one header is used -->
+        <h1 id="list"> Campground Amenities  </h1>
+        <hr>
+          <ul>
+            <li>Spacious Sandy Beach
+            <li>Full Hookup Sites (30 amp and 20 amp)</li>
+            <li>Water and Power Hookup sites (15 amp)</li>
+            <li>Tenting sites (With and without Power)</li>
+            <li>Boat launch ramp</li>
+            <li> Concession stand</li>
+            <li> Convenience store </li>
+            <li> Ice</li>
+            <li> Showers, washroom with flush toilets</li>
+            <li> Playground</li>
+            <li> Sea Do Rental </li>
+            <li> Free Wi-Fi </li>
+            <li> Rustic cookhouse shelter for campers use </li>
+            <li> Wedding bookings on the lovely Sandy Point </li>
+          </ul>
+          <h2>Music:
+            <audio controls="controls">
+              <source src="./webproject/audio/rainforest.mp3" />
+            </audio>
+          </h2>
+
+          <a href="index.html#icon"> <img class="toTop" src="./webproject/images/arrow.png" alt="Back to Top"/> </a>
+      </section>
+    </section>
+
+    <footer id="footer">
+      <div class="footerInfo">
+        <img class="footerIcon" src="./webproject/images/phone.png" alt="Phone Icon" />
+        <h3> Phone </h3>
+        250-832-3793 <br />
+      </div>
+      <div class="footerInfo">
+        <img class="footerIcon" src="./webproject/images/address.png" alt="Address Icon"/>
+        <h3> Address </h3>
+        <address id="address">
+        Sandy Point <br />
+        2100 Sandy Point Rd. <br />
+        Salmon Arm, BC V1E2Z8 <br />
+        </address>
+      </div>
+      <div class="footerInfo">
+        <a href="http://www.facebook.com/pages/Sandy-Point-Beach-Campground/137474779597808" target="blank">
+        <img class="footerIcon" src="./webproject/images/facebook.png" alt="Facebook Icon"/> </a>
+        <h3> Like us on Facebook! </h3>
+        <p> &copy; 2015 All Rights Reserved.<br /> Sandy Point Campground.<br/> Last Modified: 3/12/2015 </p>
+      </div>
+    </footer>
+  </body>
+</html>
